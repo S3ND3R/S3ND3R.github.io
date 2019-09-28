@@ -1,3 +1,52 @@
+
 body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: darkgray;
+}
+header {
+  background-color: white;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 200px;
+}
+
+.banner {
+  position: relative;
+  grid-column: 2/4;
+}
+.banner .logo_link {
+  position: absolute;
+  left: 90px;
+  width: 450px;
+  height: 66px;
+  background-position: center;
+  color: transparent;
+  display: block;
+  background-size: cover;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5d/Star_Tribune_Logo.svg);
+}
+.ad_link {
+  position: relative;
+  grid-column-start: 4;
+}
+
+.ad_link a {
+  position: absolute;
+  left: 150px;
+}
+
+.weather {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.weather img {
+  height: 60px;
+}
+
+.weather ul {
+  list-style: none;
 }
