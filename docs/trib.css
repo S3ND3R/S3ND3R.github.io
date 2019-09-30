@@ -1,15 +1,121 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: darkgray;
+  grid-template-columns: minmax(0, 60px) minmax(0, 1fr) minmax(430px, 1fr) minmax(0, 1fr) minmax(0, 60px) ;
+  background-color: white;
 }
 header {
   background-color: white;
-  grid-column: 1/4;
+  grid-column: 2/5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 200px;
+  height: 180px;
+}
+
+.main_dropdown {
+  position: relative;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  width: 100px;
+  height: 20px;
+}
+
+.main_cntnt {
+  display: none;
+  position: absolute;
+  color: black;
+  width: 150px;
+  z-index: 1;
+}
+
+.main_cntnt ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  padding: 0px 5px;
+  margin: 5px 0px;
+}
+
+.main_cntnt li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  padding: 5px 0px;
+  margin: 0px 0px;
+}
+
+.main_cntnt li a:hover {
+  background-color: limegreen;
+  color: white;
+}
+
+.main_dropdown:hover {
+  position: relative;
+  color: gray;
+}
+
+.main_dropdown:hover .main_cntnt{
+  display: block;
+  background-color: white;
+  position: relative;
+}
+
+.search {
+  position: relative;
+  font-size: 11px;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+}
+
+.search p {
+  position: absolute;
+  left: -100px;
+  top: -10px;
+}
+
+.search img {
+  height: 10px;
+  margin: 0px 5px;
+}
+
+.date {
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+.login_menu {
+  position: relative;
+}
+.login_menu ul {
+  position: absolute;
+  top: -10px;
+  left: -100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+}
+.login_menu li a {
+  display: block;
+  width: 38px;
+  text-decoration: none;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  margin: 0px 10px;
+}
+
+.login_menu button {
+  background-color: white;
+  border-color: green;
+  color: green;
+  padding: 4px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 11px;
+  margin: -5px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .banner {
@@ -27,15 +133,6 @@ header {
   background-size: cover;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5d/Star_Tribune_Logo.svg);
 }
-.ad_link {
-  position: relative;
-  grid-column-start: 4;
-}
-
-.ad_link a {
-  position: absolute;
-  left: 150px;
-}
 
 .weather {
   position: relative;
@@ -44,9 +141,129 @@ header {
 }
 
 .weather img {
-  height: 60px;
+  height: 50px;
 }
 
 .weather ul {
-  list-style: none;
+  margin-top: 0px;
+  position: absolute;
+  left: -38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+}
+.weather li {
+  display: block;
+  width: 90px;
+}
+
+.ad_link {
+  position: relative;
+}
+
+.ad_link a {
+  position: absolute;
+  display: block;
+  left: 130px;
+}
+
+nav {
+  position: relative;
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+nav .nav_elem {
+  border-top: gray solid 1px;
+  border-bottom: black solid 2px;
+  position: relative;
+  vertical-align: bottom;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  display: block;
+}
+
+nav .nav_elem a {
+  color: black;
+  position: absolute;
+  top:25%;
+  left: 25%;
+  text-decoration: none;
+}
+
+nav .nav_img {
+  border-bottom: black solid 2px;
+}
+
+nav .nav_img img{
+  color: black;
+  position: absolute;
+  top:-25px;
+  left: 52%;
+  height: 52px;
+}
+
+.left {
+  margin-top: 10px;
+  grid-column-start: 2;
+  background-color: white;
+  border-right: lightgray solid 1px;
+}
+
+.center {
+  margin-top: 10px;
+  grid-column-start: 3;
+  background-color: white;
+}
+
+.right {
+  margin-top: 10px;
+  grid-column-start: 4;
+  background-color: white;
+  border-left: lightgray solid 1px;
+}
+
+article {
+  border-bottom: lightgray solid 1px;
+  margin: 0px 15px;
+}
+
+article h1 a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Whitman Display Condensed Bold",Georgia,Times,serif;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article h3 a {
+  display: block;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Whitman Display Condensed Bold",Georgia,Times,serif;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+article .location a {
+  display: block;
+  color: gray;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
