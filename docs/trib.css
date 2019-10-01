@@ -10,6 +10,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 180px;
+  position: relative;
 }
 
 .main_dropdown {
@@ -80,10 +81,18 @@ header {
 }
 
 .date {
+  position: relative;
   font-family: "Benton Sans",Helvetica,Arial,sans-serif;
   font-size: 11px;
   font-weight: bold;
+  color: #737373;
 }
+
+.date p {
+  position: absolute;
+  left: -45px;
+}
+
 .login_menu {
   position: relative;
 }
@@ -102,6 +111,7 @@ header {
   font-family: "Benton Sans",Helvetica,Arial,sans-serif;
   font-size: 11px;
   margin: 0px 10px;
+  color: black;
 }
 
 .login_menu button {
@@ -153,8 +163,16 @@ header {
   list-style-type: none;
 }
 .weather li {
+  margin: 0px 0px;
   display: block;
   width: 90px;
+}
+
+.weather li a {
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
 }
 
 .ad_link {
@@ -183,6 +201,10 @@ nav .nav_elem {
   font-family: "Benton Sans",Helvetica,Arial,sans-serif;
   font-size: 14px;
   display: block;
+}
+
+nav .nav_elem:hover {
+  background-color: lightgray;
 }
 
 nav .nav_elem a {
@@ -266,4 +288,66 @@ article .location a {
   margin-top: 10px;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+footer {
+  margin-top: 20px;
+  grid-column: 1/6;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: minmax(0, 60px) minmax(0, 1fr) minmax(430px, 1fr) minmax(0, 1fr) minmax(0, 60px) ;
+}
+
+footer .foot_head {
+  grid-column: 2/5;
+}
+
+footer .foot_wrap {
+  margin-top: 20px;
+  position: relative;
+  grid-column: 2/5;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+footer .foot_wrap .foot_elem {
+  position: relative;
+  vertical-align: bottom;
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color: limegreen;
+  font-weight: bold;
+  display: block;
+  height: 250px;
+}
+
+footer .foot_elem ul {
+  position: absolute;
+  left: -40px;
+  list-style-type: none;
+}
+
+footer .foot_elem li {
+  margin: 5px 5px;
+}
+
+footer .foot_elem a {
+  text-decoration: none;
+  color: gray;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+footer .copyright {
+  position: relative;
+  grid-column: 1/6;
+  background-color: #e6e6e6;
+  color: gray;
+  height: 50px;
+}
+
+footer .copyright p {
+  position: absolute;
+  left: 20px;
 }
