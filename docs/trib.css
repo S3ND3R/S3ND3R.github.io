@@ -247,9 +247,20 @@ nav .nav_img img{
   border-left: lightgray solid 1px;
 }
 
+#right {
+ float: right;
+ padding: 20px 20px 20px 0;
+}
+
+#ad {
+ float: right;
+ padding: 20px 20px 20px 0;
+}
+
 article {
   border-bottom: lightgray solid 1px;
-  margin: 0px 15px;
+  margin: 10px 15px;
+  margin-left: 10px;
 }
 
 article h1 a {
@@ -276,6 +287,34 @@ article h3 a {
   font-size: 20px;
   line-height: 100%;
 }
+
+article p {
+  display: block;
+  color: black;
+  font-style: normal;
+  font-family: "Whitman Display Condensed Bold",Georgia,Times,serif;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+article ul {
+  color: limegreen;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Whitman Display Condensed Bold",Georgia,Times,serif;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+article li a {
+  color: black;
+  /* font-style: normal;
+  font-weight: bold;
+  font-family: "Whitman Display Condensed Bold",Georgia,Times,serif;
+  font-size: 20px;
+  line-height: 100%; */
+}
+
 
 article .location a {
   display: block;
