@@ -6,5 +6,14 @@
     <script type="text/javascript" src="docs/pass.js"></script>
   </head>
   <body>
+    <main>
+      <h1>Password Generator</h1>
+      <div class="min-wrd-inpt">
+        <label for="min_word">Minimum Word Length</label>
+        <input type="range" class="min_word" value="3" min="1" max="8" oninput="updateSlider()">
+        <span id="min_word_val"></span>
+      </div>
+
+    </main>
   </body>
 </html>

@@ -1,0 +1,19 @@
+h1 {
+  color: blue;
+}
+
+.min-wrd-inpt {
+  border: black solid 2px;
+  display: block;
+}
+
+.min_word {
+  border: black solid 2px;
+  width: 50%;
+  height: 25px;
+}
+
+#min_word_val {
+  border: black solid 2px;
+  font-size: 25px;
+}
