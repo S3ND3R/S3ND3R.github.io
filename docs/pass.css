@@ -2,18 +2,49 @@ h1 {
   color: blue;
 }
 
-.min-wrd-inpt {
-  border: black solid 2px;
-  display: block;
+.word_slider {
+  display: grid;
+  grid-template-columns: 14% 1fr 1fr;
 }
 
+ /* button {
+    background-color: green;
+  }
+
 .min_word {
-  border: black solid 2px;
-  width: 50%;
+  display: block;
+  width: 25%;
   height: 25px;
 }
 
 #min_word_val {
   border: black solid 2px;
   font-size: 25px;
+} */
+.pass_table {
+  width: 100%;
+}
+tr {
+  /* width: 100%;
+  border: black solid 5px;
+  margin-top: 20px;
+  padding: 4px 2px; */
+  background-color: ghostwhite;
+}
+
+tr.tab:nth-child(even){
+  background-color: lightgray;
+  border: black solid 5px;
+}
+
+td {
+  display: inline-table;
+  border: 1px solid black;
+  margin: 2px 4px;
+  padding: 4px 4px;
+  background-color: whitesmoke;
+}
+
+td.pass-l {
+  background-color: azure;
 }
