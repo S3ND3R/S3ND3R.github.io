@@ -30,3 +30,19 @@
     flex: 1 1 calc(33% - 2rem);
   }
 }
+
+.map-container {
+  position: relative;
+  top: 100;
+  width: 25%;
+  background-color: black;
+}
+
+#map {
+  position: absolute;
+  top: 100;
+  bottom: 10;
+  left: 2%;
+  right: 5;
+  width: 10%;
+}
