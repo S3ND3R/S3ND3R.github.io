@@ -1,65 +1,19 @@
-<!DOCTYPE html>
-<html>
+
+<html lang="en">
   <head>
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="docs/pass.css">
-    <script type="text/javascript" src="docs/pass.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="docs/mid.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Midterm Mashup</title>
   </head>
   <body>
-    <main>
-      <h1>Password Generator</h1>
+    <!-- <label for="">State: </label> <input type="text" id="state"> -->
+    <!-- <button type="button" id="load_brewer" onclick="loadBeers()">Local State Breweries</button> -->
+    <div id="root"></div>
 
-      <div class="word_slider">
-        <label for="min_word">Minimum Word Length</label>
-        <input type="range" class="min_word" value="3" min="1" max="8" oninput="updateSliders()">
-        <p>length: <span id="min_word_val"> </span> </p>
-      </div>
-
-      <div class="word_slider">
-        <label for="max_word">Maximum Word Length</label>
-        <input type="range" class="max_word" value="3" min="1" max="8" oninput="updateSliders()">
-        <p>length: <span id="max_word_val"> </span> </p>
-      </div>
-
-      <div class="pass_lngth_dropdown">
-        <label for="pass_lngth">Maximum Password Length</label>
-        <select class="pass_lngth" class="pass_lngth" value="8">
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-        </select>
-      </div>
-
-      <div class="num_sub_checkbox">
-        <input type="checkbox" class="num_sub">
-        <label for="num_sub">Number Substitutions?</label>
-      </div>
-
-      <div class="easy_checkbox">
-        <input type="checkbox" class="easy_wrd">
-        <label for="easy_wrd">Easy Typing?</label>
-      </div>
-
-      <div class="print">
-        <button type="button" class="pass_btn" onclick="getWord()">Generate Password</button>
-      </div>
-      <h3 class="words">Possible Passwords</h3>
-      <div class="pass_table"></div>
-    </main>
+    <!-- script section -->
+    <script src='docs/mid.js'></script>
   </body>
 </html>
